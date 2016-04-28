@@ -15,7 +15,7 @@ class ServiceProvider extends Default_ServiceProvider
         $this->loadViewsFrom(__DIR__.'/views', 'EModal');
 
         $this->publishes([
-            __DIR__ . '/js' => public_path('/js/modal'),
+            __DIR__ . '/js' => public_path('/js/emodal'),
         ]);
     }
 
