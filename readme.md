@@ -1,24 +1,37 @@
-# Elicit Modal (Laravel)
- 
-### Composer:
-
+# Elicit Modal (Laravel) 
+Elicit Modal is a laravel component, which opens a links URL and puts the result in a modal.
+  
+##### Composer:
+Add elicit modal as a depencency with Composer
 ```
   "require": {
-    "heppykarlsson/emodal-laravel": "dev-master"
+    "heppykarlsson/emodal-laravel": "1.0.*"
   },
   "repositories": [
     { "type": "vcs", "url": "https://github.com/HeppyKarlsson/emodal-laravel.git" }
   ],
 ```
 
-### Publish files.
-```
-php artisan vendor:publish
-```
-
-
-### Use in blade
+##### Load in Layout
+Import the placeholder and javscripts in your layouts.
 ``` 
 <script src="/js/emodal/manager.js"></script>
 @include('EModal::modal')
+```
+
+##### Use on a link
+Add the class "modal-open" on a link and emodal will automatically open the link with a ajax request and open the result in a modal.
+```
+<a class="modal-open" href="URL_TO_OPEN_AS_MODAL">
+   Your link text
+</a>
+```
+
+---
+
+## Optional steps
+
+##### Publish files.
+```
+php artisan vendor:publish
 ```

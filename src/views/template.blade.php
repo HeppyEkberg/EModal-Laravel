@@ -11,5 +11,11 @@
         <div class="modal-body">
             @yield('modal-body')
         </div>
+
+        @if(View::hasSection('modal-footer'))
+            <div class="modal-footer">
+                @yield('modal-footer')
+            </div>
+        @endif
     </div>
 </div>
